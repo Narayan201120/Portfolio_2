@@ -5,15 +5,15 @@
    ========================================================== */
 
 :root {
-  --paper: #fafaf8;
-  --ink: #1b1e1d;
-  --ink-soft: #3e4542;
-  --ink-2: #5a625e;
-  --line: #e4e6e1;
-  --line-strong: #c9cdc5;
-  --wash: #f0f1ec;
+  --paper: #f7f3ea;
+  --ink: #211d16;
+  --ink-soft: #4a4437;
+  --ink-2: #6b6355;
+  --line: #e7e0d0;
+  --line-strong: #cdc3ad;
+  --wash: #efe8d8;
   --accent: #0b5a60;
-  --accent-soft: #e3ecec;
+  --accent-soft: #e3e8e2;
   --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
   --mono: 'Spline Sans Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -372,7 +372,7 @@ code {
 }
 .links a, .oss-what a, .oss-repo a, .oss-extra a, .site-footer a {
   text-decoration: underline;
-  text-decoration-color: var(--line-strong);
+  text-decoration-color: var(--ink-2);
   text-underline-offset: 3px;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
@@ -380,6 +380,18 @@ code {
   color: var(--accent);
   text-decoration-color: var(--accent);
 }
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+}
+.gh-mark {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  flex: none;
+}
+.btn .gh-mark { vertical-align: -0.12em; }
 
 /* --- open source --- */
 .oss-group + .oss-group { margin-top: 2.5rem; }
