@@ -17,7 +17,6 @@
   function renderThemeBtn() {
     if (!themeBtn) return;
     var target = effectiveTheme() === 'dark' ? 'light' : 'dark';
-    themeBtn.textContent = target;
     themeBtn.setAttribute('aria-label', 'Switch to ' + target + ' theme');
   }
 
