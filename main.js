@@ -100,7 +100,7 @@
   var roleEl = document.getElementById('role-val');
   if (roleEl && !reduceMotion.matches) {
     var roles = [
-      'Backend & AI/ML Engineer',
+      'Full-Stack & AI Engineer',
       'Backend Developer',
       'AI/ML Engineer',
       'RAG Engineer',
