@@ -3,360 +3,402 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Narayan Joshi — Backend Developer & AI/ML Engineer</title>
-  <meta name="description" content="Portfolio of Narayan Joshi — Backend Developer and AI/ML Engineer specializing in RAG systems, LLM orchestration, and scalable API design.">
-  <meta property="og:title" content="Narayan Joshi — Backend Developer & AI/ML Engineer">
-  <meta property="og:description" content="Building production-grade AI infrastructure with Django, Python, and vector databases.">
+  <title>Narayan Joshi — Backend Developer &amp; AI/ML Engineer</title>
+  <meta name="description" content="Portfolio of Narayan Joshi — backend developer and AI/ML engineer building RAG systems, LLM orchestration, and the APIs underneath them.">
+  <link rel="canonical" href="https://narayan-joshi.netlify.app/">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafaf8">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141816">
+
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Narayan Joshi">
+  <meta property="og:title" content="Narayan Joshi — Backend Developer &amp; AI/ML Engineer">
+  <meta property="og:description" content="RAG systems, LLM orchestration, and the backend infrastructure underneath them.">
+  <meta property="og:url" content="https://narayan-joshi.netlify.app/">
+  <meta property="og:image" content="https://narayan-joshi.netlify.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Narayan Joshi — Backend Developer &amp; AI/ML Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Narayan Joshi — Backend Developer &amp; AI/ML Engineer">
+  <meta name="twitter:description" content="RAG systems, LLM orchestration, and the backend infrastructure underneath them.">
+  <meta name="twitter:image" content="https://narayan-joshi.netlify.app/og-image.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch (e) { /* storage unavailable — fall back to system preference */ }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Spline+Sans+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- CROSSHAIR CURSOR -->
-<div id="crosshair">
-  <div class="h-line"></div>
-  <div class="v-line"></div>
-  <div class="dot"></div>
-  <div class="coords">x:0 y:0</div>
-</div>
-
-<!-- TOP BAR -->
-<header class="topbar">
-  <div class="topbar-left">
-    <span class="topbar-title">narayan@portfolio:~</span>
-  </div>
-  <nav class="topbar-nav">
-    <a href="#hero">home</a>
-    <a href="#about">about</a>
-    <a href="#projects">projects</a>
-    <a href="#experience">experience</a>
-    <a href="#contact">contact</a>
-  </nav>
-  <div class="topbar-status">
-    <span class="pulse"></span>
-    <span>available for work</span>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">nj<span class="brand-cursor" aria-hidden="true">_</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#open-source">open source</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">dark</button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">menu</button>
+    </div>
   </div>
 </header>
 
+<main id="main">
+
 <!-- HERO -->
-<div class="container">
-<section id="hero">
-  <div class="hero-terminal">
-    <div class="hero-line hero-comment">// welcome to my portfolio</div>
-    <!-- <div class="hero-line hero-comment">// last updated: april 2026</div> -->
-    <div class="hero-line" style="height:16px;"></div>
-    <div class="hero-line hero-name-line">NARAYAN <span class="outline">JOSHI</span></div>
-    <div class="hero-line hero-role-line">
-      <span class="key">role</span>: <span class="val" id="role-val">"Backend Developer"</span><span class="type-cursor">▌</span>
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap">
+    <p class="kicker" aria-hidden="true">~/narayan-joshi</p>
+    <h1 id="hero-title">Narayan Joshi</h1>
+    <p class="role">
+      <span class="sr-only">Backend &amp; AI/ML Engineer</span>
+      <span aria-hidden="true"><span class="role-prompt">$</span> <span id="role-val">Backend &amp; AI/ML Engineer</span><span class="type-cursor" id="type-cursor">▌</span></span>
+    </p>
+    <p class="lede">
+      I build the backend under AI products — RAG pipelines, LLM orchestration,
+      and APIs that hold up in production.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn ghost" href="mailto:joshi.narayan2004@gmail.com">Email me</a>
     </div>
-    <div class="hero-line hero-desc-line">
-      <strong>Backend Developer & AI/ML Engineer</strong> specializing in
-      <strong>RAG systems</strong>, <strong>LLM orchestration</strong>, and
-      <strong>scalable API design</strong>. Building production-grade
-      AI infrastructure with Django, Python, and vector databases.
-    </div>
-    <div class="hero-line hero-ctas-line">
-      <a href="#projects" class="btn-cmd">$ view_projects</a>
-      <a href="mailto:joshi.narayan2004@gmail.com" class="btn-cmd green">$ send_mail</a>
-    </div>
+    <p class="hero-meta">Pune, India — available for work</p>
   </div>
 </section>
-</div>
-
-<!-- MARQUEE -->
-<div class="marquee-strip">
-  <div class="marquee-inner">
-    <span>RAG SYSTEMS</span><span class="dot">◈</span>
-    <span>LLM ORCHESTRATION</span><span class="dot">◈</span>
-    <span>DJANGO REST FRAMEWORK</span><span class="dot">◈</span>
-    <span>VECTOR DATABASES</span><span class="dot">◈</span>
-    <span>FASTAPI</span><span class="dot">◈</span>
-    <span>CELERY + REDIS</span><span class="dot">◈</span>
-    <span>SEMANTIC SEARCH</span><span class="dot">◈</span>
-    <span>REACT NATIVE</span><span class="dot">◈</span>
-    <span>AI AGENTS</span><span class="dot">◈</span>
-    <span>SUPABASE</span><span class="dot">◈</span>
-    <span>RAG SYSTEMS</span><span class="dot">◈</span>
-    <span>LLM ORCHESTRATION</span><span class="dot">◈</span>
-    <span>DJANGO REST FRAMEWORK</span><span class="dot">◈</span>
-    <span>VECTOR DATABASES</span><span class="dot">◈</span>
-    <span>FASTAPI</span><span class="dot">◈</span>
-    <span>CELERY + REDIS</span><span class="dot">◈</span>
-    <span>SEMANTIC SEARCH</span><span class="dot">◈</span>
-    <span>REACT NATIVE</span><span class="dot">◈</span>
-    <span>AI AGENTS</span><span class="dot">◈</span>
-    <span>SUPABASE</span><span class="dot">◈</span>
-  </div>
-</div>
-
-<div class="container">
 
 <!-- ABOUT -->
-<section id="about">
-  <div class="term-header reveal">
-    <div class="term-prompt">
-      <span class="user">narayan</span>@<span class="path">portfolio</span>:~$ <span class="cmd">cat about.md</span>
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <p class="kicker" aria-hidden="true">~/about</p>
+    <h2 id="about-title">About</h2>
+    <div class="prose reveal">
+      <p>
+        Final-year B.E. student at Sinhgad Institute of Technology &amp; Science, Pune.
+        I work where AI logic meets backend infrastructure: RAG systems, LLM
+        orchestration, and scalable API design built on Django and vector databases.
+      </p>
+      <p>
+        Right now I'm building <strong>Meridian</strong>, a productivity app with
+        AI-powered voice transcription, and <strong>DocuMind</strong>, a
+        production-grade RAG platform with hybrid search and evaluation pipelines.
+      </p>
     </div>
-    <div class="term-output">About Me</div>
-  </div>
-
-  <div class="about-text reveal reveal-d1">
-    <p>
-      Final year <strong>B.E. student</strong> at Sinhgad Institute of Technology & Science, Pune. I specialize in bridging complex AI logic with robust backend infrastructure — specifically <strong>RAG systems</strong>, <strong>LLM orchestration</strong>, and <strong>scalable API design</strong> using Django and vector databases.
-    </p>
-    <br>
-    <p>
-      Currently building <strong>Meridian</strong>, a cross-platform productivity app with AI-powered voice transcription, and <strong>DocuMind</strong>, a production-grade RAG platform with hybrid search and ML evaluation pipelines.
-    </p>
-  </div>
-
-  <div class="skills-grid">
-    <div class="skill-block reveal reveal-d1">
-      <h4>// backend</h4>
-      <div class="tags">
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Django</span>
-        <span class="skill-tag">DRF</span>
-        <span class="skill-tag">FastAPI</span>
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">JWT Auth</span>
-        <span class="skill-tag">Celery</span>
-        <span class="skill-tag">Redis</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">Supabase</span>
-        <span class="skill-tag">WebSockets</span>
+    <div class="skills reveal">
+      <div class="skill-cluster">
+        <h3>backend</h3>
+        <p>Python / Django / DRF / FastAPI / Node.js / JWT auth / Celery / Redis / PostgreSQL / Supabase / WebSockets</p>
       </div>
-    </div>
-    <div class="skill-block reveal reveal-d2">
-      <h4>// ai & ml</h4>
-      <div class="tags">
-        <span class="skill-tag">RAG</span>
-        <span class="skill-tag">LLMs</span>
-        <span class="skill-tag">OpenAI</span>
-        <span class="skill-tag">Gemini</span>
-        <span class="skill-tag">Llama</span>
-        <span class="skill-tag">Whisper API</span>
-        <span class="skill-tag">Semantic Search</span>
-        <span class="skill-tag">pgvector</span>
-        <span class="skill-tag">FAISS</span>
-        <span class="skill-tag">AI Agents</span>
-        <span class="skill-tag">DeepEval</span>
+      <div class="skill-cluster">
+        <h3>ai &amp; ml</h3>
+        <p>RAG / LLMs / OpenAI / Gemini / Llama / Whisper API / semantic search / pgvector / FAISS / AI agents / DeepEval</p>
       </div>
-    </div>
-    <div class="skill-block reveal reveal-d2">
-      <h4>// frontend & mobile</h4>
-      <div class="tags">
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">React Native</span>
-        <span class="skill-tag">Expo</span>
+      <div class="skill-cluster">
+        <h3>frontend &amp; mobile</h3>
+        <p>React / React Native / Expo</p>
       </div>
-    </div>
-    <div class="skill-block reveal reveal-d3">
-      <h4>// tools & devops</h4>
-      <div class="tags">
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">Linux</span>
-        <span class="skill-tag">Postman</span>
-        <span class="skill-tag">Power BI</span>
-        <span class="skill-tag">FCM</span>
+      <div class="skill-cluster">
+        <h3>tools &amp; devops</h3>
+        <p>Docker / Git / Linux / Postman / Power BI / FCM</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <div class="term-header reveal">
-    <div class="term-prompt">
-      <span class="user">narayan</span>@<span class="path">portfolio</span>:~$ <span class="cmd">ls -la projects/</span>
+<section id="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <p class="kicker" aria-hidden="true">~/projects</p>
+    <h2 id="projects-title">Projects</h2>
+
+    <div class="project-list">
+
+      <article class="project reveal">
+        <div class="project-head">
+          <h3>Meridian</h3>
+          <span class="status">active</span>
+        </div>
+        <p class="project-desc">
+          Offline-first productivity platform with AI voice capture, two-way Google
+          Calendar and Outlook sync, and real-time sync across web and mobile.
+        </p>
+        <p class="stack">FastAPI / React Native / Expo / Supabase / PostgreSQL / Redis / Whisper API</p>
+        <p class="links"><a href="https://github.com/Narayan201120/meridian">GitHub</a></p>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-head">
+          <h3>DocuMind</h3>
+          <span class="status">active</span>
+        </div>
+        <p class="project-desc">
+          Multi-tenant RAG platform: FAISS vector search with cross-encoder
+          reranking, bring-your-own-key LLM routing, and DeepEval generation scoring.
+        </p>
+        <p class="stack">Django / React / FAISS / PostgreSQL / DeepEval</p>
+        <p class="links">
+          <a href="https://github.com/Narayan201120/rag_web_app">GitHub</a>
+          <a href="https://rag-web-app-delta.vercel.app">Live</a>
+        </p>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-head">
+          <h3>ARGUS</h3>
+          <span class="status">active</span>
+        </div>
+        <p class="project-desc">
+          FastAPI backend that fans each query out to researcher, analyzer, and
+          verifier roles, then synthesizes their structured output into one answer.
+        </p>
+        <p class="stack">Python / FastAPI / LLM routing / AI agents</p>
+        <p class="links"><a href="https://github.com/Narayan201120/argus">GitHub</a></p>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-head">
+          <h3>Research Radar</h3>
+        </div>
+        <p class="project-desc">
+          Paper search engine for computer vision and LLM research: ParadeDB BM25,
+          RRF hybrid ranking, and semantic find-similar, covered by 105 tests.
+        </p>
+        <p class="stack">FastAPI / Next.js / PostgreSQL / ParadeDB / pgvector</p>
+        <p class="links"><a href="https://github.com/Narayan201120/research-radar">GitHub</a></p>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-head">
+          <h3>WindLens</h3>
+        </div>
+        <p class="project-desc">
+          Decision support for day-ahead wind power buying on the GB grid: it pairs
+          forecasts with reported outturn and translates the misses into plain language.
+        </p>
+        <p class="stack">TypeScript / Elexon data / Vercel</p>
+        <p class="links">
+          <a href="https://github.com/Narayan201120/tcnswzd">GitHub</a>
+          <a href="https://windlens-dayahead.vercel.app">Live</a>
+        </p>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-head">
+          <h3>AirLock DB</h3>
+        </div>
+        <p class="project-desc">
+          Local-first migration CLI for air-gapped environments: strict schema
+          validation, SQLite or JSONL output, and one self-contained HTML report.
+        </p>
+        <p class="stack">Python / SQLite / JSONL</p>
+        <p class="links"><a href="https://github.com/Narayan201120/airlock-db">GitHub</a></p>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-head">
+          <h3>ndjoshi-tui</h3>
+        </div>
+        <p class="project-desc">
+          This portfolio as a real terminal application — boxed panels, vim keys,
+          and themes. Runs with <code>bunx ndjoshi-tui</code>.
+        </p>
+        <p class="stack">TypeScript / Bun / npm</p>
+        <p class="links"><a href="https://github.com/Narayan201120/ndjoshi_tui">GitHub</a></p>
+      </article>
+
     </div>
-    <div class="term-output">Selected Projects</div>
   </div>
+</section>
 
-  <div class="projects-list">
+<!-- OPEN SOURCE -->
+<section id="open-source" aria-labelledby="oss-title">
+  <div class="wrap">
+    <p class="kicker" aria-hidden="true">~/open-source</p>
+    <h2 id="oss-title">Open source</h2>
+    <p class="section-note">Pull requests and bug reports in projects I don't maintain.</p>
 
-    <!-- MERIDIAN -->
-    <article class="bp-card reveal reveal-d1">
-      <div class="bp-card-header">
-        <span>SEC.01 // Jan 2026 — Present</span>
-        <span class="status">ACTIVE</span>
-      </div>
-      <h3>Meridian — Full-Stack Productivity Platform</h3>
-      <ul>
-        <li>Architected an offline-first cross-platform productivity app (Expo/FastAPI) with real-time sync across web and mobile via Supabase Realtime.</li>
-        <li>Integrated OpenAI Whisper API for voice-to-task transcription with per-user usage caps and a self-host migration path at scale.</li>
-        <li>Engineered a two-way calendar sync service for Google Calendar and Outlook (Microsoft Graph) with isolated OAuth token management and retry logic.</li>
+    <div class="oss-group reveal">
+      <h3 class="oss-repo"><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a></h3>
+      <ul class="oss-list">
+        <li>
+          <span class="badge merged">merged</span>
+          <span class="oss-what"><a href="https://github.com/open-telemetry/opentelemetry-collector/pull/16034">Reuse cached item counts for trace and log max-size splits</a> — the batch processor stops re-counting every item on max-size splits</span>
+        </li>
+        <li>
+          <span class="badge merged">merged</span>
+          <span class="oss-what"><a href="https://github.com/open-telemetry/opentelemetry-collector/pull/16013">Reuse cached metric count for max-size splits</a> — same fix for the metrics pipeline</span>
+        </li>
+        <li>
+          <span class="badge open">open</span>
+          <span class="oss-what"><a href="https://github.com/open-telemetry/opentelemetry-collector/pull/16230">Fail startup when persistent queue metadata cannot be read</a></span>
+        </li>
+        <li>
+          <span class="badge open">open</span>
+          <span class="oss-what"><a href="https://github.com/open-telemetry/opentelemetry-collector/pull/16229">Fix persistent queue state after marshal errors</a></span>
+        </li>
+        <li>
+          <span class="badge open">open</span>
+          <span class="oss-what"><a href="https://github.com/open-telemetry/opentelemetry-collector/pull/16071">Document that ProfilesCountSizer reports two different units</a></span>
+        </li>
+        <li class="oss-extra">plus a series of filed issues on persistent-queue and batching correctness</li>
       </ul>
-      <div class="bp-tech">
-        <span>React Native</span><span>Expo</span><span>FastAPI</span><span>Supabase</span><span>PostgreSQL</span><span>Redis</span><span>Whisper API</span><span>FCM</span>
-      </div>
-      <div class="bp-links">
-        <a href="https://github.com/Narayan201120/meridian" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          GitHub
-        </a>
-      </div>
-    </article>
+    </div>
 
-    <!-- DOCUMIND -->
-    <article class="bp-card reveal reveal-d2">
-      <div class="bp-card-header">
-        <span>SEC.02 // Nov 2025 — Present</span>
-        <span class="status">ACTIVE</span>
-      </div>
-      <h3>DocuMind — Production-Grade MLOps & RAG Platform</h3>
-      <ul>
-        <li>Architected a multi-tenant RAG application (React/Django), enabling users to securely ingest diverse documents into isolated workspaces.</li>
-        <li>Optimized retrieval accuracy by building a two-stage hybrid search pipeline combining FAISS vector mapping with a Cross-Encoder reranker.</li>
-        <li>Engineered an agnostic LLM routing layer with BYOK security, and integrated DeepEval to programmatically score generation fidelity against synthetic datasets.</li>
+    <div class="oss-group reveal">
+      <h3 class="oss-repo"><a href="https://github.com/Lamatic/AgentKit">Lamatic/AgentKit</a></h3>
+      <ul class="oss-list">
+        <li>
+          <span class="badge merged">merged</span>
+          <span class="oss-what"><a href="https://github.com/Lamatic/AgentKit/pull/385">Add Debrief, an interview feedback summarizer kit</a></span>
+        </li>
       </ul>
-      <div class="bp-tech">
-        <span>Django</span><span>React</span><span>FAISS</span><span>PostgreSQL</span><span>DeepEval</span><span>Cross-Encoders</span><span>RAG</span><span>JWT</span>
-      </div>
-      <div class="bp-links">
-        <a href="https://github.com/Narayan201120/rag_web_app" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          GitHub
-        </a>
-      </div>
-    </article>
+    </div>
 
-    <!-- ARGUS -->
-    <article class="bp-card reveal reveal-d3">
-      <div class="bp-card-header">
-        <span>SEC.03 // Sept 2025 — Present</span>
-        <span class="status">ACTIVE</span>
-      </div>
-      <h3>ARGUS — AI Orchestration Framework</h3>
-      <ul>
-        <li>Developing an orchestration framework to unify and route requests across multiple AI models, optimizing for cost and quality.</li>
-        <li>Implementing intelligent routing logic to dynamically select models (e.g., Llama vs. GPT-4) based on query complexity.</li>
-        <li>Building a modular architecture allowing seamless integration of new model providers and custom AI agents.</li>
+    <div class="oss-group reveal">
+      <h3 class="oss-repo"><a href="https://github.com/pingdotgg/t3code">pingdotgg/t3code</a></h3>
+      <ul class="oss-list">
+        <li>
+          <span class="badge open">open</span>
+          <span class="oss-what"><a href="https://github.com/pingdotgg/t3code/pull/25374">perf(client-runtime): reuse projection entity lookups</a></span>
+        </li>
+        <li>
+          <span class="badge open">open</span>
+          <span class="oss-what"><a href="https://github.com/pingdotgg/t3code/pull/21100">fix(opencode): recover model catalogs during plugin activation</a></span>
+        </li>
+        <li class="oss-extra">plus <a href="https://github.com/pingdotgg/t3code/pull/20328">four</a> <a href="https://github.com/pingdotgg/t3code/pull/18304">more</a> <a href="https://github.com/pingdotgg/t3code/pull/15863">PRs</a> <a href="https://github.com/pingdotgg/t3code/pull/13606">closed</a> after review</li>
       </ul>
-      <div class="bp-tech">
-        <span>Python</span><span>AI Agents</span><span>LLM Routing</span><span>API Integration</span>
-      </div>
-      <div class="bp-links">
-        <a href="https://github.com/Narayan201120/argus" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          GitHub
-        </a>
-      </div>
-    </article>
-
+    </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-  <div class="term-header reveal">
-    <div class="term-prompt">
-      <span class="user">narayan</span>@<span class="path">portfolio</span>:~$ <span class="cmd">git log --oneline experience/</span>
-    </div>
-    <div class="term-output">Experience</div>
-  </div>
-
-  <div class="exp-list">
-    <div class="exp-item reveal reveal-d1">
-      <div class="exp-dates">Jan — Mar<br>2025</div>
-      <div class="exp-body">
-        <h3>Power BI Intern</h3>
-        <div class="company">KasNet Technologies Pvt. Ltd. — Pune</div>
-        <p>Designed interactive dashboards and reports, transforming complex datasets into clear visual narratives to improve business insights.</p>
-        <span class="tag">Internship</span>
-      </div>
-    </div>
-    <div class="exp-item reveal reveal-d2">
-      <div class="exp-dates">May — Aug<br>2024</div>
-      <div class="exp-body">
-        <h3>Data Science & Analytics Intern</h3>
-        <div class="company">Zidio Development Pvt. Ltd. — Remote</div>
-        <p>Conducted end-to-end data analysis using Python and SQL. Automated data cleaning workflows, reducing manual prep time by 40%. Developed predictive models and visualized business scenarios for stakeholders.</p>
-        <span class="tag">Internship</span>
-      </div>
+<section id="experience" aria-labelledby="experience-title">
+  <div class="wrap">
+    <p class="kicker" aria-hidden="true">~/experience</p>
+    <h2 id="experience-title">Experience</h2>
+    <div class="row-list">
+      <article class="row-entry reveal">
+        <p class="row-dates">Jan — Mar 2025</p>
+        <div class="row-body">
+          <h3>Power BI Intern</h3>
+          <p class="row-org">KasNet Technologies Pvt. Ltd. — Pune</p>
+          <p class="row-desc">Designed interactive dashboards and reports, turning complex datasets into clear visual narratives for business decisions.</p>
+        </div>
+      </article>
+      <article class="row-entry reveal">
+        <p class="row-dates">May — Aug 2024</p>
+        <div class="row-body">
+          <h3>Data Science &amp; Analytics Intern</h3>
+          <p class="row-org">Zidio Development Pvt. Ltd. — Remote</p>
+          <p class="row-desc">End-to-end analysis in Python and SQL. Automated data cleaning workflows, cutting manual preparation time by 40%, and built predictive models and visualizations for stakeholders.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
-  <div class="term-header reveal">
-    <div class="term-prompt">
-      <span class="user">narayan</span>@<span class="path">portfolio</span>:~$ <span class="cmd">cat education.json</span>
-    </div>
-    <div class="term-output">Education</div>
-  </div>
-
-  <div class="edu-list">
-    <div class="edu-card reveal reveal-d1">
-      <h3>B.E. in Electronics & Telecommunication</h3>
-      <div class="school">Sinhgad Institute of Technology & Science, Narhe</div>
-      <div class="meta">Graduation: 2026 &nbsp;|&nbsp; T.E. CGPA: <span class="gpa">8.55</span></div>
-    </div>
-    <div class="edu-card reveal reveal-d2">
-      <h3>HSC (12th Grade)</h3>
-      <div class="school">S B Junior College, Jalna</div>
-      <div class="meta">2022 &nbsp;|&nbsp; Percentage: 58.83%</div>
+<section id="education" aria-labelledby="education-title">
+  <div class="wrap">
+    <p class="kicker" aria-hidden="true">~/education</p>
+    <h2 id="education-title">Education</h2>
+    <div class="row-list">
+      <article class="row-entry reveal">
+        <p class="row-dates">2022 — 2026</p>
+        <div class="row-body">
+          <h3>B.E. in Electronics &amp; Telecommunication</h3>
+          <p class="row-org">Sinhgad Institute of Technology &amp; Science, Narhe, Pune</p>
+          <p class="row-desc">T.E. CGPA: 8.55</p>
+        </div>
+      </article>
+      <article class="row-entry reveal">
+        <p class="row-dates">2022</p>
+        <div class="row-body">
+          <h3>HSC (12th grade)</h3>
+          <p class="row-org">S B Junior College, Jalna</p>
+          <p class="row-desc">58.83%</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="term-header reveal">
-    <div class="term-prompt">
-      <span class="user">narayan</span>@<span class="path">portfolio</span>:~$ <span class="cmd">ls certifications/</span>
-    </div>
-    <div class="term-output">Certifications</div>
-  </div>
-
-  <div class="certs-grid">
-    <div class="cert-card reveal reveal-d1">
-      <div class="cert-issuer">IBM</div>
-      <div class="cert-name">Enterprise Grade AI</div>
-    </div>
-    <div class="cert-card reveal reveal-d2">
-      <div class="cert-issuer">Deloitte Australia</div>
-      <div class="cert-name">Data Analytics Job Simulation</div>
-    </div>
-    <div class="cert-card reveal reveal-d3">
-      <div class="cert-issuer">Spoken Tutorial</div>
-      <div class="cert-name">C / C++ Programming</div>
+<section id="certifications" aria-labelledby="certifications-title">
+  <div class="wrap">
+    <p class="kicker" aria-hidden="true">~/certifications</p>
+    <h2 id="certifications-title">Certifications</h2>
+    <div class="row-list">
+      <article class="row-entry reveal">
+        <p class="row-dates">IBM</p>
+        <div class="row-body">
+          <h3>Enterprise Grade AI</h3>
+        </div>
+      </article>
+      <article class="row-entry reveal">
+        <p class="row-dates">Deloitte Australia</p>
+        <div class="row-body">
+          <h3>Data Analytics Job Simulation</h3>
+        </div>
+      </article>
+      <article class="row-entry reveal">
+        <p class="row-dates">Spoken Tutorial</p>
+        <div class="row-body">
+          <h3>C / C++ Programming</h3>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="term-header reveal">
-    <div class="term-prompt">
-      <span class="user">narayan</span>@<span class="path">portfolio</span>:~$ <span class="cmd">echo $CONTACT</span>
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <p class="kicker" aria-hidden="true">~/contact</p>
+    <h2 id="contact-title">Contact</h2>
+    <div class="prose reveal">
+      <p>
+        I'm looking for backend and AI/ML roles. If you have a question, a project,
+        or an opening — my inbox is open.
+      </p>
     </div>
-    <div class="term-output">Get In Touch</div>
-  </div>
-  <div class="contact-inner reveal reveal-d1">
-    <p class="contact-text">
-      I'm currently looking for new opportunities. Whether you have a question, a project idea, or just want to say hi — my inbox is always open.
+    <p class="contact-email"><a href="mailto:joshi.narayan2004@gmail.com">joshi.narayan2004@gmail.com</a></p>
+    <p class="contact-links">
+      <a class="btn ghost" href="https://www.linkedin.com/in/narayan-joshi-85227425a">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/Narayan201120">GitHub</a>
     </p>
-    <a href="mailto:joshi.narayan2004@gmail.com" class="contact-email">joshi.narayan2004@gmail.com</a>
-    <div class="contact-links">
-      <a href="https://www.linkedin.com/in/narayan-joshi-85227425a" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="https://github.com/Narayan201120" target="_blank" rel="noopener">GitHub ↗</a>
-    </div>
   </div>
 </section>
 
-</div>
+</main>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <span>Built by Narayan Joshi</span>
-    <span>Pune, Maharashtra — 2026</span>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Narayan Joshi — Pune, India</span>
+    <span><a href="https://github.com/Narayan201120/Portfolio_2">source</a></span>
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>
