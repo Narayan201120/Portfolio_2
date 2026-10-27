@@ -14,6 +14,10 @@
   --wash: #efe8d8;
   --accent: #0b5a60;
   --accent-soft: #e3e8e2;
+  --grid: rgba(11, 90, 96, 0.05);
+  --grid-strong: rgba(11, 90, 96, 0.09);
+  --scanline: rgba(33, 29, 22, 0.03);
+  --header-bg: rgba(247, 243, 234, 0.86);
   --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
   --mono: 'Spline Sans Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -30,6 +34,10 @@
   --wash: #1b201d;
   --accent: #63c7b8;
   --accent-soft: #1d2b28;
+  --grid: rgba(99, 199, 184, 0.04);
+  --grid-strong: rgba(99, 199, 184, 0.075);
+  --scanline: rgba(0, 0, 0, 0.06);
+  --header-bg: rgba(20, 24, 22, 0.86);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +51,10 @@
     --wash: #1b201d;
     --accent: #63c7b8;
     --accent-soft: #1d2b28;
+    --grid: rgba(99, 199, 184, 0.04);
+    --grid-strong: rgba(99, 199, 184, 0.075);
+    --scanline: rgba(0, 0, 0, 0.06);
+    --header-bg: rgba(20, 24, 22, 0.86);
   }
 }
 
@@ -63,6 +75,39 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* --- terminal background: blueprint grid + scanlines --- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(var(--grid-strong) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-strong) 1px, transparent 1px);
+  background-size:
+    20px 20px,
+    20px 20px,
+    100px 100px,
+    100px 100px;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--scanline) 2px,
+    var(--scanline) 4px
+  );
 }
 
 ::selection { background: var(--accent); color: var(--paper); }
@@ -111,7 +156,9 @@ a:focus-visible, button:focus-visible {
   top: 0;
   z-index: 100;
   height: var(--header-h);
-  background: var(--paper);
+  background: var(--header-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
   transition: background 0.3s ease;
 }
